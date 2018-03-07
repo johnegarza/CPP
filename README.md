@@ -5,7 +5,8 @@ Lab4_final.exe MagicSquare [integer board dimension] [minimum integer piece valu
 Lab4_final.exe NineAlmonds
 
 
-Main file: Lab4_final.cpp
+Main file/entry point: Lab4_final.cpp (contains the main method)
+The program first attempts to initialize a game, loading in the board state if a save file is found or creating a new save file for future use if one does not already exist. This logic is contained in the GameBase class. The program may exit during this step if: the wrong number of arguments were specified or the arguments were malformed (a usage message is printed out); a game is already set and running, thus failing the singleton control; or if loading from he save file fails. Note: all values that are casted to int before returning are enums, defined in index.h. 
 
 
 We implemented a smart pointer that can point to an instance of any one of the games, and construct that instance in dynamic memory. This meant we never had to deal with memory leaks.
